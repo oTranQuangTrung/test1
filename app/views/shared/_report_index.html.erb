@@ -1,0 +1,34 @@
+<table style="border: 1px">
+  <thead>
+    <th>Seed label</th>
+    <th>Fruit name</th>
+    <th>Seed consumed</th>
+  </thead>
+  <% reports.each do |report| %>
+    <tbody>
+      <tr>
+        <td><%= report.label %></td>
+        <td><%= report.fruit.name %></td>
+        <td><%= report.consumed %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+
+<%= link_to root_path do %>
+  Back to home page
+<% end %>
+
+<style type="text/css">
+  table, th, td {
+     border: 1px solid grey;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+</style>
